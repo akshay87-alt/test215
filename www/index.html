@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<!-- <script type="text/javascript" src="Calculator.js"></script> -->
+
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+			document.addEventListener("deviceready", onDeviceReady, false);
+		    function onDeviceReady() {
+		        // alert("navigator.geolocation works well");
+		            navigator.geolocation.getCurrentPosition(onSuccess, onError);
+		    }
+		  var onSuccess = function(position) {
+        alert('Latitude: '          + position.coords.latitude          + '\n' +
+              'Longitude: '         + position.coords.longitude         + '\n' +
+              'Altitude: '          + position.coords.altitude          + '\n' +
+              'Accuracy: '          + position.coords.accuracy          + '\n' +
+              'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
+              'Heading: '           + position.coords.heading           + '\n' +
+              'Speed: '             + position.coords.speed             + '\n' +
+              'Timestamp: '         + position.timestamp                + '\n');
+    };
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+    onDeviceReady();
+		});
+
+
+</script>
+
+
+<script type="text/javascript" src="cordova.js"></script>
+
+</head>
+<body>
+
+
+ 
+
+</body>
+</html>
+
+
+<script type="text/javascript">
+	   
+</script>
